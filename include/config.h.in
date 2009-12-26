@@ -1,4 +1,10 @@
 
+/*
+ * Copyright (C) 2007-2009, libturglem development team.
+ * This file is released under the LGPL.
+ *
+ */
+
 #define WZ_HTTPD_VERSION  "${CMAKE_WZ_HTTPD_VERSION}"
 #define WZ_HTTPD_CFG_DIR  "${CMAKE_WZ_HTTPD_CFG_DIR}"
 #define WZ_HTTPD_LOG_DIR  "${CMAKE_WZ_HTTPD_LOG_DIR}"
