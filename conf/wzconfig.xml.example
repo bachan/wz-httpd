@@ -1,0 +1,127 @@
+<wzconfig>
+	<log_file_name>wz.log</log_file_name>
+	<log_level>info</log_level>
+	<pid_file_name>/tmp/wz.pid</pid_file_name>
+
+	<!-- if no listeners defined will create default 0.0.0.0:80 -->
+	<!-- params: ip(80), port(0.0.0.0), canskip(0) -->
+	<listener port="8080" />
+
+	<!-- plugins -->
+	<!-- plugin params are:
+	     1) name, is used by factory to init.
+	     2) library: empty means "built-in", or the name of the library.
+	     3) params: string of init params, depends on plugins.
+	-->
+	<plugins>
+<!--		<plugin name="logotip" library="libmod_logotip.so" params="/etc/mod_logotip.xml" /-->
+	</plugins>
+
+	<!-- standart answers and error strings -->
+	<default_answer>&lt;html&gt;
+&lt;title&gt;Default answer page&lt;/title&gt;
+&lt;body&gt;
+&lt;p&gt;
+Your request was well, but we have nothing to answer. :-)
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</default_answer>
+
+	<error_5xx>&lt;html&gt;
+&lt;title&gt;5xx error&lt;/title&gt;
+&lt;body&gt;
+&lt;p&gt;
+Server is not able to answer your request.
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</error_5xx>
+
+	<error_4xx>&lt;html&gt;
+&lt;title&gt;4xx error&lt;/title&gt;
+&lt;body&gt;
+&lt;p&gt;
+Server was unable to parse your request.
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</error_4xx>
+
+	<http-codes>
+		<http-code code="100" msg="Continue"/>
+		<http-code code="101" msg="Switching Protocols"/>
+		<http-code code="200" msg="OK"/>
+		<http-code code="201" msg="Created"/>
+		<http-code code="202" msg="Accepted"/>
+		<http-code code="203" msg="Non-Authoritative Information"/>
+		<http-code code="204" msg="No Content"/>
+		<http-code code="205" msg="Reset Content"/>
+		<http-code code="206" msg="Partial Content"/>
+		<http-code code="300" msg="Multiple Choices"/>
+		<http-code code="301" msg="Moved Permanently"/>
+		<http-code code="302" msg="Moved Temporarily"/>
+		<http-code code="303" msg="See Other"/>
+		<http-code code="304" msg="Not Modified"/>
+		<http-code code="305" msg="Use Proxy"/>
+		<http-code code="400" msg="Bad Request"/>
+		<http-code code="401" msg="Unauthorized"/>
+		<http-code code="402" msg="Payment Required"/>
+		<http-code code="403" msg="Forbidden"/>
+		<http-code code="404" msg="Not Found"/>
+		<http-code code="405" msg="Method Not Allowed"/>
+		<http-code code="406" msg="Not Acceptable"/>
+		<http-code code="407" msg="Proxy Authentication Required"/>
+		<http-code code="408" msg="Request Timeout"/>
+		<http-code code="409" msg="Conflict"/>
+		<http-code code="410" msg="Gone"/>
+		<http-code code="411" msg="Length Required"/>
+		<http-code code="412" msg="Precondition Failed"/>
+		<http-code code="413" msg="Request Entity Too Large"/>
+		<http-code code="414" msg="Request-URI Too Long"/>
+		<http-code code="415" msg="Unsupported Media Type"/>
+		<http-code code="500" msg="Internal Server Error"/>
+		<http-code code="501" msg="Not Implemented"/>
+		<http-code code="502" msg="Bad Gateway"/>
+		<http-code code="503" msg="Service Unavailable"/>
+		<http-code code="504" msg="Gateway Timeout"/>
+		<http-code code="505" msg="HTTP Version Not Supported"/>
+		<http-code code="100" msg="Continue"/>
+		<http-code code="101" msg="Switching Protocols"/>
+		<http-code code="200" msg="OK"/>
+		<http-code code="201" msg="Created"/>
+		<http-code code="202" msg="Accepted"/>
+		<http-code code="203" msg="Non-Authoritative Information"/>
+		<http-code code="204" msg="No Content"/>
+		<http-code code="205" msg="Reset Content"/>
+		<http-code code="206" msg="Partial Content"/>
+		<http-code code="300" msg="Multiple Choices"/>
+		<http-code code="301" msg="Moved Permanently"/>
+		<http-code code="302" msg="Moved Temporarily"/>
+		<http-code code="303" msg="See Other"/>
+		<http-code code="304" msg="Not Modified"/>
+		<http-code code="305" msg="Use Proxy"/>
+		<http-code code="400" msg="Bad Request"/>
+		<http-code code="401" msg="Unauthorized"/>
+		<http-code code="402" msg="Payment Required"/>
+		<http-code code="403" msg="Forbidden"/>
+		<http-code code="404" msg="Not Found"/>
+		<http-code code="405" msg="Method Not Allowed"/>
+		<http-code code="406" msg="Not Acceptable"/>
+		<http-code code="407" msg="Proxy Authentication Required"/>
+		<http-code code="408" msg="Request Timeout"/>
+		<http-code code="409" msg="Conflict"/>
+		<http-code code="410" msg="Gone"/>
+		<http-code code="411" msg="Length Required"/>
+		<http-code code="412" msg="Precondition Failed"/>
+		<http-code code="413" msg="Request Entity Too Large"/>
+		<http-code code="414" msg="Request-URI Too Long"/>
+		<http-code code="415" msg="Unsupported Media Type"/>
+		<http-code code="500" msg="Internal Server Error"/>
+		<http-code code="501" msg="Not Implemented"/>
+		<http-code code="502" msg="Bad Gateway"/>
+		<http-code code="503" msg="Service Unavailable"/>
+		<http-code code="504" msg="Gateway Timeout"/>
+		<http-code code="505" msg="HTTP Version Not Supported"/>
+	</http-codes>
+</wzconfig>
