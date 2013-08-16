@@ -70,6 +70,7 @@ void talker::reset(int dont_close)
 	memset(buffer, 0, WZ_BUFFER_SIZE);
 	buffer_cur_read = buffer_cur_write = buffer;
 	request->ip = ip;
+	cur_header = 0;
 }
 
 void talker::done()
