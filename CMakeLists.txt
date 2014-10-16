@@ -27,7 +27,7 @@ ADD_EXECUTABLE(wz-httpd src/listener.cpp src/plugins.cpp src/server_status.cpp s
 FIND_LIBRARY(CODA_LIBRARY NAMES coda PATHS /usr/lib /usr/local/lib PATHS /usr/lib64 /usr/local/lib64)
 FIND_LIBRARY(EXPAT_LIBRARY NAMES expat PATHS /usr/lib /usr/local/lib)
 
-TARGET_LINK_LIBRARIES(wz-httpd ${EXPAT_LIBRARY} ${CODA_LIBRARY} pthread)
+TARGET_LINK_LIBRARIES(wz-httpd ${CODA_LIBRARY} ${EXPAT_LIBRARY} pthread)
 
 IF(CMAKE_SYSTEM_NAME STREQUAL Linux)
 	TARGET_LINK_LIBRARIES(wz-httpd dl)
