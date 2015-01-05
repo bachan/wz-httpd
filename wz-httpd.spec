@@ -1,11 +1,10 @@
 Summary:	WZ http server
 Name:		wz-httpd	
-Version:	1.0
+Version:	1.0.0
 Release:	0%{?dist}
-
 Group:		Networking/Daemons
 License:	GPL
-Source:		wz-httpd.tar.gz
+Source:		wz-httpd-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %package devel
@@ -24,7 +23,7 @@ documentation for %{name}. If you like to develop modules for %{name},
 you will need to install %{name}-devel.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}
 
 %build
 %cmake .
